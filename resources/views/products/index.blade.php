@@ -1,6 +1,12 @@
 @extends('products.layout')
 
 @section('content')
+
+@if (session('success'))
+    <div class="alert alert-success">
+        {{session('success')}}
+    </div>
+@endif
 <div class="space-y-8 p-4 bg-mc-panel border-4 border-mc-border rounded-xl">
     <div class="flex justify-between items-center mb-6 border-b-2 border-mc-border pb-4">
         <h2 class="text-4xl font-bold text-mc-text tracking-wider">

@@ -12,3 +12,6 @@ Route::resource('products', ProductController::class);
 Route::get('/test', function () {
     return "Hello World I'm driss";
 });
+
+Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
+// Route::get('products', [ProductController::class, 'store'])->name('products.store');
