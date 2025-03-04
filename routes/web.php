@@ -12,6 +12,15 @@ Route::resource('products', ProductController::class);
 Route::get('/test', function () {
     return "Hello World I'm driss";
 });
-
+// Creat ->
 Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
-// Route::get('products', [ProductController::class, 'store'])->name('products.store');
+
+// edit ->
+Route::get('products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+
+// Update ->
+Route::put('products/{product}', [ProductController::class, 'update'])->name('products.update');
+
+// delete ->
+Route::delete('products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+
