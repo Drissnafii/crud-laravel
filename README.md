@@ -72,3 +72,19 @@ public function definition(): array
 }
 
 ````
+
+than we should inswert some fake data
+using => 
+````bash
+php artisan db:seed --class=ProductSeeder
+````
+
+if we have a problem maby is from the view ext...
+we should than run those cmd's
+
+```bash
+php artisan route:clear
+php artisan config:clear
+php artisan cache:clear
+php artisan view:clear
+```

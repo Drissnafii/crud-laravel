@@ -11,9 +11,9 @@
         </a>
     </div>
 
-    <div class="overflow-x-auto">
-        <table class="w-full border-4 border-mc-border">
-            <thead class="bg-mc-button text-mc-text">
+    <div class="overflow-y-auto max-h-[500px] border-4 border-mc-border rounded">
+        <table class="w-full">
+            <thead class="bg-mc-button text-mc-text sticky top-0 z-10">
                 <tr>
                     @php
                         $headers = ['ID', 'Item Name', 'Stack Size', 'Description', 'Actions'];
