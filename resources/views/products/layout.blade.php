@@ -13,7 +13,7 @@
                         'mc-background': '#5B8C5A',
                         'mc-panel': '#3A6EA5',
                         'mc-text': '#E0E0E0',
-                        'mc-button': '#8B4513',
+                        'mc-button': '#654321',
                         'mc-button-hover': '#A0522D',
                         'mc-border': '#2F4F4F'
                     },
