@@ -22,7 +22,7 @@
             <thead class="bg-mc-button text-mc-text sticky top-0 z-10">
                 <tr>
                     @php
-                        $headers = ['ID', 'Item Name', 'Stack Size', 'Description', 'Actions'];
+                        $headers = ['ID', 'Item Name', 'Stack Size', 'Description','Status', 'Actions'];
                     @endphp
                     @foreach($headers as $header)
                         <th class="px-4 py-3 text-left border-2 border-mc-border">

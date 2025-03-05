@@ -89,4 +89,11 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Product deleted successfully!');
     }
+
+    public function updateButton(Request $request)
+    {
+        // Process the request and return a response
+        // For example, you can perform some database operations or other logic here
+        return response()->json(['success' => true]);
+    }
 }

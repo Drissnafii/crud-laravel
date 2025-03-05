@@ -2,28 +2,12 @@
 
 @section('content')
 <div class="space-y-8 p-4 bg-mc-panel border-4 border-mc-border rounded-xl relative">
-    <div class="absolute top-4 right-4 w-32 h-32">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="animate-bounce">
-            <g fill="#8B4513">
-                {/* Craftsman/Villager body */}
-                <rect x="22" y="20" width="20" height="30" />
-                {/* Arms */}
-                <rect x="15" y="25" width="10" height="5" />
-                <rect x="39" y="25" width="10" height="5" />
-                {/* Head */}
-                <rect x="22" y="10" width="20" height="10" />
-            </g>
-            <g fill="#DEB887">
-                {/* Face details */}
-                <rect x="26" y="14" width="4" height="2" />
-                <rect x="34" y="14" width="4" height="2" />
-            </g>
-        </svg>
-    </div>
+
 
     <div class="border-b-2 border-mc-border pb-4 mb-6">
         <h1 class="text-4xl font-bold text-mc-text tracking-wider">
-            Edit Item in Crafting Table
+
+            Edit Item {{$product->id}}
         </h1>
     </div>
 
