@@ -1,4 +1,4 @@
-Absolutely! Creating a CRUD (Create, Read, Update, Delete) application using Laravel 12 involves several steps. Let's get started:
+Creating a CRUD (Create, Read, Update, Delete) application using Laravel 12 involves several steps. Let's get started:
 
 ### Step 1: Install Laravel 12
 First, make sure you have Composer installed on your machine. Then, run the following command in your terminal to create a new Laravel project:
