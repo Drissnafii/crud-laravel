@@ -19,6 +19,10 @@
             @unless (count($laguages) > 0 )
             <p>Pas de Cours Pour l'instant !</p>
             @else
+            @php
+                 $z = ($y + $x) / $f
+            @endphp
+            <h1>{{$z}}</h1>
             <tr>
                 <th>Coures: </th>
             </tr>
@@ -27,7 +31,21 @@
                 <td>{{$laguage}}</td>
             </tr>
             @endforeach
-
             @endunless
+
+            @switch($color)
+                @case("red")
+                    <p>ces une couleur {{$color}}</p>
+                    @break
+                @case("blanc")
+                    <p>ces une couleur {{$color}}</p>
+                    @break
+                @default
+                <h4>This color -> {{$color}},Is not a choice</h4>
+            @endswitch
+
+
+
+
 </body>
 </html>
