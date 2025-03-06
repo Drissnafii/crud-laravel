@@ -129,5 +129,3 @@ php artisan serve
 ```
 
 Open your browser and navigate to `http://localhost:8000/posts` to see your CRUD application in action!
-
-I hope this helps you get started with your Laravel 12 CRUD application. If you have any questions or need further assistance, feel free to ask!
