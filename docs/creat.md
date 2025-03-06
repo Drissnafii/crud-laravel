@@ -85,5 +85,3 @@ To display success messages after creating a product, add the following code to 
 
 ### Summary
 Now, when you navigate to `http://your-app-url/products/create`, you should see a form to create a new product. Upon submitting the form, the product will be stored in the database, and you'll be redirected to the product list with a success message.
-
-I hope this helps! Let me know if you have any questions or run into any issues.
