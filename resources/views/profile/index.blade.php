@@ -1,3 +1,4 @@
+@include('includes.master')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +8,6 @@
     <title>Profile</title>
 </head>
 <body>
-    <h1>This is the home page</h1>
-    <h1>This is the home page</h1>
-    <h1>This is the home page</h1>
-    <h3> </h3>
+    <h2>This is the profile Page</h2>
 </body>
 </html>
