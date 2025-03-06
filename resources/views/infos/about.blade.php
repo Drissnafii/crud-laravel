@@ -1,4 +1,6 @@
-@include('includes.master')
+@extends('includes.master')
+@section('main')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,7 @@
     <title>About</title>
 </head>
 <body>
-    <h2>This is our About Page</h2>
+    <h2>About Page</h2>
 </body>
 </html>
+@endsection
