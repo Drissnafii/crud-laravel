@@ -24,6 +24,10 @@ class ProductController extends Controller
     {
         return view('products.creat');
     }
+    public function ff()
+    {
+        return view('products.index');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -96,4 +100,16 @@ class ProductController extends Controller
         // For example, you can perform some database operations or other logic here
         return response()->json(['success' => true]);
     }
+
+    public function changeStatus(Product $product)
+    {
+        // Toggle the status between 'active' and 'inactive'
+        $product->status = $product->status === 'active' ? 'innactive' : 'active';
+        $product->save();
+
+        // Redirect back to the product list or wherever you want
+        return redirect()->route('products.index')->with('success', 'Product status updated successfully!');
+    }
+
+
 }

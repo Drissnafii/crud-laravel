@@ -46,6 +46,23 @@
                     <td class="px-4 py-3 border-2 border-mc-border">
                         {{ Str::limit($product->description, 50) }}
                     </td>
+
+                    {{-- <td>
+                        <a href="{{ route('products.changeStatus', $product->id) }}"
+                            class="bg-green-600 px-2 py-1 rounded hover:bg-green-700 transition-colors">
+                            {{ $product->status }}
+                         </a>
+                    </td> --}}
+{{--
+                    <td class="px-4 py-3 border-2 border-mc-border">
+                        <form action="{{ route('product.toggleStatus') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $product->id }}">
+                            <button type="submit" class="px-3 py-1 text-white rounded {{ $product->status === 'Active' ? 'bg-green-500' : 'bg-red-500' }}">
+                                {{ $product->status === 'Active' ? 'Deactivate' : 'Activate' }}
+                            </button>
+                        </form>
+                    </td> --}}
                     <td class="px-4 py-3 border-2 border-mc-border">
                         <div class="flex space-x-2">
                             <a href="{{ route('products.show', $product->id) }}" class="bg-green-600 px-2 py-1 rounded hover:bg-green-700 transition-colors">
