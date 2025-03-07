@@ -11,6 +11,8 @@
 </head>
 <body>
     <h2>Your Profile</h2>
+
+    {{-- <x-users-table nom="Sama"/> --}}
 </body>
 </html>
 @endsection
