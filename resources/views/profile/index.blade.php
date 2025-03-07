@@ -10,7 +10,9 @@
     <title>Profile</title>
 </head>
 <body>
-    <h2>Your Profile</h2>
+    <h2>Your Profile</h2> <span>
+        Mr. <x-name username="Driss"/>
+    </span>
 
     {{-- <x-users-table nom="Sama"/> --}}
 </body>

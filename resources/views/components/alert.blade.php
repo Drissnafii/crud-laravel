@@ -1,7 +1,4 @@
-@props(['type', 'text'])
+@props(['type'])
 <div class="alert alert-{{$type}}" role="alert">
-    <!-- The whole future lies in uncertainty: live immediately. - Seneca -->
-
-        {{$tex = Salam}}
+    {{$slot}}
 </div>
-
