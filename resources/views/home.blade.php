@@ -19,6 +19,5 @@
 
 <x-users-table :users=$users/>
 @endsection
-jjj
 
 </x-master>

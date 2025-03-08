@@ -1,4 +1,4 @@
-@extends('includes.master')
+@extends('components.master')
 @section('main')
 
 <!DOCTYPE html>

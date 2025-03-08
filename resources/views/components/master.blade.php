@@ -8,13 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    @include('includes.nav')
+    @include('components.nav')
 
     <main>
         @yield(section: 'main')
     </main>
 
-    @include('includes.footer')
+    {{-- @include('components.nav') --}}
     {{-- -- NAV
     -- MAIN
     -- FOOTER --}}
