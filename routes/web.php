@@ -10,5 +10,5 @@ Route::get('/', [homeController::class, 'index']); // => App\Http\Controllers\ho
 
 // Route::resource('products', ProductController::class);
 
-Route::get("/profile", [profileController::class, 'index']);
+Route::get("/profiles", [profileController::class, 'index']);
 Route::get('/info', [infoController::class, 'index']);
