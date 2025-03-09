@@ -11,9 +11,9 @@ Profile - {{$profile->name}}
 <!-- Profile Container -->
 <div class="w3-container w3-padding-64">
     <div class="w3-card-4 w3-margin w3-white w3-center">
-        <header class="w3-container w3-teal">
-            <h2 class="w3-margin-bottom"><i class="fa fa-user"></i> Profile</h2>
-        </header>
+                <header class="w3-container w3-padding w3-light-blue"> {{-- Changed header to light-blue for a friendlier color --}}
+                        <h2 class="w3-margin-bottom w3-center"><i class="fa fa-user"></i> {{ $profile->name }}'s Profile</h2> {{-- Centered header text and made it more descriptive --}}
+                    </header>
 
         <div class="w3-container w3-padding">
             <div class="w3-row-padding">
