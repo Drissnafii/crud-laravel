@@ -15,10 +15,7 @@ class profileController extends Controller
 
     public function show(Request $request) {
         // dd($request->id);
-        $profile = Profile::find($request->id);
-        if ($profile === NULL) {
-            return abort(403);
-        }
+        $profile = Profile::findOrFail($request->id);
         return view('profiles.show', compact('profile'));
     }
 }
