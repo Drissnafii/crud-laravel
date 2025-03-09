@@ -12,3 +12,4 @@ Route::get('/', [homeController::class, 'index'])->name('homepage.index'); // =>
 
 Route::get("/profiles", [profileController::class, 'index'])->name('profiles.index');
 Route::get('/info', [infoController::class, 'index'])->name('info.index');
+Route::get('/profiles/{id}', [profileController::class, 'show'])->name('info.show');
