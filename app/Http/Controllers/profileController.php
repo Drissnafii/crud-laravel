@@ -9,13 +9,13 @@ use Symfony\Component\HttpKernel\Profiler\Profiler;
 class profileController extends Controller
 {
     public function index() {
-        $profiles = Profile::all();
+        $profiles = Profile::paginate(10);
         return view('profiles.index', compact('profiles'));
     }
 
-    public function show($id) {
-        $profile = Profile::find($id);
-        // dd($profile);
+    public function show(Request $request) {
+        // dd($request->id);
+        $profile = Profile::find($request->id);
         return view('profiles.show', compact('profile'));
     }
 }
