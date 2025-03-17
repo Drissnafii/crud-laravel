@@ -10,6 +10,7 @@
         <a href="/" class="w3-bar-item w3-button">Accueil</a>
         <a href="{{route('profiles.index')}}" class="w3-bar-item w3-button">Profiles</a>
         <a href="/info" class="w3-bar-item w3-button">About</a>
+        <a href="/profile/create" class="w3-bar-item w3-button">New Profile</a>
     </nav>
 
 </body>

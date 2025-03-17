@@ -18,4 +18,30 @@ class profileController extends Controller
         $profile = Profile::findOrFail($request->id);
         return view('profiles.show', compact('profile'));
     }
+
+    public function create()   {
+        // dd('salam');
+        return view('profiles.create');
+    }
+
+    public function store(Request $request)   {
+        // dd($request->all());
+        $name = $request->name;
+        $email = $request->email;
+        $password = $request->password;
+        $bio = $request->bio;
+
+        // validatio
+        $request->validate([
+            'name'=> 'required|string|max:255',
+            'email'=> 'required|email',
+        ]);
+        // inserssion
+        Profile::create([
+            'name'=> $name,
+            'email'=> $email,
+            'password'=> bcrypt($password),
+            'bio'=> $bio
+        ]);
+    }
 }
