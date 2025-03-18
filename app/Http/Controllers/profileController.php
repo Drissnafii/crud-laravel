@@ -13,9 +13,10 @@ class profileController extends Controller
         return view('profiles.index', compact('profiles'));
     }
 
-    public function show(Request $request) {
-        // dd($request->id);
-        $profile = Profile::findOrFail($request->id);
+    public function show(Profile $profile) {
+
+        // $profile = $id;
+        // $profile = Profile::findOrFail($request->id);
         return view('profiles.show', compact('profile'));
     }
 
@@ -28,7 +29,7 @@ class profileController extends Controller
         // dd($request->all());
         $name = $request->name;
         $email = $request->email;
-        $password = $request->password;
+        $password = $request->pass;
         $bio = $request->bio;
 
         // validatio
@@ -40,8 +41,12 @@ class profileController extends Controller
         Profile::create([
             'name'=> $name,
             'email'=> $email,
-            'password'=> bcrypt($password),
+            'pass'=> bcrypt($password),
             'bio'=> $bio
         ]);
+
+        // return redirect()->route('profiles.index')->with('success','Profile created successfully.');
+        //  return back();
+        return to_route('profiles.index')->with('success', 'Profile created successfully');
     }
 }

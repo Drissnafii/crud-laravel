@@ -11,6 +11,12 @@
     @include('components.nav')
 
     <main>
+        {{-- <x-alert type="success">
+            salam
+        </x-alert> --}}
+        @if (session()->has('success'))
+        {{ session('success') }}
+        @endif
         @yield(section: 'main')
     </main>
 

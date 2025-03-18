@@ -13,7 +13,7 @@ Route::get("/profiles", [profileController::class, 'index'])->name('profiles.ind
 Route::get('/info', [infoController::class, 'index'])->name('info.index');
 
 // Show the detail of a Profile
-Route::get('/profiles/{id}', [profileController::class, 'show'])
+Route::get('/profiles/{profile:email}', [profileController::class, 'show'])
 ->where('id','\d+')
 ->name('info.show');
 
@@ -21,4 +21,3 @@ Route::get('/profiles/{id}', [profileController::class, 'show'])
 Route::get('/profile/create', [profileController::class, 'create'])->name('create');
 
 Route::post('/profile/store', [profileController::class, 'store'])->name('store');
- 
