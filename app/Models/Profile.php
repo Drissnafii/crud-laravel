@@ -12,6 +12,6 @@ class Profile extends Model
         'name',
         'email',
         'pass',
-        'bio'
+        'bio' 
         ];
 }

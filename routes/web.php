@@ -11,13 +11,13 @@ Route::get('/', [homeController::class, 'index'])->name('homepage.index'); // =>
 
 Route::get("/profiles", [profileController::class, 'index'])->name('profiles.index');
 Route::get('/info', [infoController::class, 'index'])->name('info.index');
+Route::get('/profile/create', [profileController::class, 'create'])->name('create');
 
 // Show the detail of a Profile
-Route::get('/profiles/{profile:email}', [profileController::class, 'show'])
+Route::get('/profiles/{profile}', [profileController::class, 'show'])
 ->where('id','\d+')
 ->name('info.show');
 
 
-Route::get('/profile/create', [profileController::class, 'create'])->name('create');
 
 Route::post('/profile/store', [profileController::class, 'store'])->name('store');

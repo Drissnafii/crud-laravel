@@ -34,8 +34,8 @@ class profileController extends Controller
 
         // validatio
         $request->validate([
-            'name'=> 'required|string|max:255',
-            'email'=> 'required|email',
+            'name'=> 'required|string|between:4,255',
+            'email'=> 'required|email|unique:profiles',
         ]);
         // inserssion
         Profile::create([
