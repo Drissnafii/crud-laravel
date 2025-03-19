@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\profileRequest;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Profiler\Profiler;
@@ -25,18 +26,13 @@ class profileController extends Controller
         return view('profiles.create');
     }
 
-    public function store(Request $request)   {
-        // dd($request->all());
-        $name = $request->name;
-        $email = $request->email;
-        $password = $request->pass;
-        $bio = $request->bio;
+    public function store(profileRequest $profileRequest)   {
 
-        // validatio
-        $request->validate([
-            'name'=> 'required|string|between:4,255',
-            'email'=> 'required|email|unique:profiles',
-        ]);
+        // dd($request->all());
+        $name = $profileRequest->name;
+        $email = $profileRequest->email;
+        $password = $profileRequest->pass;
+        $bio = $profileRequest->bio;
         // inserssion
         Profile::create([
             'name'=> $name,
@@ -44,7 +40,6 @@ class profileController extends Controller
             'pass'=> bcrypt($password),
             'bio'=> $bio
         ]);
-
         // return redirect()->route('profiles.index')->with('success','Profile created successfully.');
         //  return back();
         return to_route('profiles.index')->with('success', 'Profile created successfully');
