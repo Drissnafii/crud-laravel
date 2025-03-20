@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,6 +27,7 @@
         <a href="{{ route('profiles.index') }}" class="w3-bar-item w3-button">Profiles</a>
         <a href="/info" class="w3-bar-item w3-button">About</a>
         <a href="/profile/create" class="w3-bar-item w3-button">New Profile</a>
+        <a href="{{ route('login.show') }}" class="w3-bar-item w3-button">Se Connecter</a>
     </nav>
 
 </body>
